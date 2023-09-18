@@ -1,0 +1,17 @@
+
+.favorites_button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.register_page_button{
+    display: block;
+}
+
+.header{
+    /* padding: 0 5%; */
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
