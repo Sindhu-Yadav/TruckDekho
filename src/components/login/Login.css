@@ -1,0 +1,32 @@
+
+.login {
+    background-color: rgb(228, 155, 155);
+    width: 98%;
+    margin: 2% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loginform {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .loginform_container {
+    border: transparent;
+    text-align: center;
+    border-radius: 10px;
+    width: 20%;
+    height: 50vh;
+    padding: 0 2%;
+  }
+  
+  .btn {
+    margin: 0 auto;
+  }
+  
+  .registerlink{
+    color: blue;
+  }

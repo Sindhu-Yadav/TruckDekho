@@ -1,5 +1,6 @@
+
 .product {
-  border: solid 2px grey;
+  border: transparent;
   border-radius: 20px;
   width: 20rem;
   display: flex;

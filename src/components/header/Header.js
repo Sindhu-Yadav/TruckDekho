@@ -24,7 +24,7 @@ const Header = () => {
         /> 
         <button className="search_button">
           <FontAwesomeIcon className="search_icon" icon={faSearch} />
-        </button>
+        </button> 
       </section>
       
       <section className="right_header">
