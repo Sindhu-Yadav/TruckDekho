@@ -10,7 +10,7 @@ const Header = () => {
       <div className="header_upper">  
       <section className="left_header">
         <h1>
-          <a className="icon" href="/home">
+          <a className="icon" href="/">
             TruckDekho
           </a>
         </h1>

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Home.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import Featured from "../featured/Featured";
+import { Link } from "react-router-dom";
+
 
 function Home() {
   const [label, setLabel] = useState("");
@@ -18,7 +19,8 @@ function Home() {
   ];
 
   return (
-    <div className="home" id="home">
+    <div>
+      <div className="home" id="home">
       <div className="form_container">
         <h4>Select your Budget</h4>
         <select className="form_select" onChange={handleSelect}>
@@ -26,8 +28,12 @@ function Home() {
             <option className="options" value={option.value}>{option.label}</option>
           ))}
         </select>
+        <Link to="/products_page" >
         <button className="btn">Search</button>
+        </Link>
       </div>
+    </div>
+    <Featured />
     </div>
   );
 }

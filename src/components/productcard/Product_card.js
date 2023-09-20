@@ -1,6 +1,6 @@
 
 import React from 'react';
-import "./Product.css";
+import "./Product_card.css";
 
 const Product = (props) => {
   return (

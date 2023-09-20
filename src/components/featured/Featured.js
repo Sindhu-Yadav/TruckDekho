@@ -2,7 +2,7 @@ import React from "react";
 import "./Featured.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Product from "../product/Product";
+import Product from "../productcard/Product_card.js";
 
 const Featured = () => {
   const responsive = {
