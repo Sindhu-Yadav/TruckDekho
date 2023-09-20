@@ -7,25 +7,44 @@ import { faHeart, faUser } from "@fortawesome/fontawesome-free-regular";
 const Header = () => {
   return (
     <div className="header">
-      <h1 className="left">
-        <a className="icon" href="/home">
-          TruckDekho
-        </a>
-      </h1>
-      <form className="middle" action="submit" method="get">
-        <input type="text" placeholder="Search Trucks" />
-        <button className="search-button">
-          <FontAwesomeIcon icon={faSearch} />
+      <div className="header_upper">  
+      <section className="left_header">
+        <h1>
+          <a className="icon" href="/home">
+            TruckDekho
+          </a>
+        </h1>
+      </section>
+      
+      <section className="middle_header">
+        <input
+          className="search_input"
+          type="text"
+          placeholder="Search Trucks"
+        /> 
+        <button className="search_button">
+          <FontAwesomeIcon className="search_icon" icon={faSearch} />
         </button>
-      </form>
-      <div className="right">
-      <button className="favorites_button">
-        <FontAwesomeIcon icon={faHeart} />
-      </button>
-      <a href="/register" className="register_page_button">
-      <FontAwesomeIcon icon={faUser} />
-      Login/Register
-      </a>
+      </section>
+      
+      <section className="right_header">
+        <a href="/favorites">
+          <FontAwesomeIcon className="favorites" icon={faHeart} />
+        </a>
+        <a href="/register" className="register_page_button">
+          <FontAwesomeIcon icon={faUser} className="user_icon"/>
+          Login/Register
+        </a>
+      </section>
+      </div>
+      <div className="header_lower">
+        <ul className="navbar">
+          <li className="navbar_item"><a href="#home">Home</a></li>
+          <li className="navbar_item"><a href="#featured">Featured</a></li>
+          <li className="navbar_item"><a href=""></a>Contact</li>
+          <li className="navbar_item"><a href=""></a>About</li>
+        </ul>
+        <section className="line"></section>
       </div>
     </div>
   );
