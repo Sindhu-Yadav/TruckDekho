@@ -18,9 +18,10 @@ const Register = () => {
         email: email,
         password: password,
       })
-      .then((result) => {
-        console.log(result);
-        navigate("/login");
+      .then((user) => {
+        if (user.data) {
+          navigate("/");
+        }
       })
       .catch((error) => {
         console.log(error);

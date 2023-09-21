@@ -16,8 +16,8 @@ const Login = () => {
         email: email,
         password: password,
       })
-      .then((result) => {
-        if(result.data === "Logged in successfully!!") {
+      .then((user) => {
+        if(user.data) {
           navigate("/");
         }
       })
