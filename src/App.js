@@ -10,7 +10,6 @@ import Login from "./components/login/Login";
 import { AuthProvider, useAuth } from "./context/auth_context";
 
 function App() {
-  const { isLoggedIn } = useAuth();
   return (
     <AuthProvider>
       <div className="App">
@@ -18,10 +17,7 @@ function App() {
         <Routes>
           <Route path="/products_page" element={<Products_page />} />
           <Route path="/" element={<Home />} />
-          <Route
-            path="/favorites"
-            element={() => (isLoggedIn ? <Favorites /> : <Login />)}
-          />
+          <Route path="/favorites" element={<Favorites />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
         </Routes>

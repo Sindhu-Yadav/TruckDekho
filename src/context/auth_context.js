@@ -1,5 +1,6 @@
 
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import Cookies from 'js-cookie';
 
 const AuthContext = createContext();
 
@@ -9,18 +10,34 @@ export const useAuth = () => {
 };
 // AuthProvider
 export const AuthProvider = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [token, setToken] = useState(null);
 
-  const login = () => {
-    setIsLoggedIn(true);
+  useEffect(() => {
+    const jwtToken = Cookies.get('jwt');
+    if (jwtToken) {
+      try {
+        setToken(jwtToken);
+      } catch (error) {
+        console.error('Token verification error:', error);
+      }
+    }
+  }, []);
+
+  const login = (jwtToken) => {
+    setToken(jwtToken);
+    Cookies.set('jwt', jwtToken, { httpOnly: true, secure: true });
   };
 
   const logout = () => {
-    setIsLoggedIn(false);
+    setToken(null);
+    Cookies.remove('jwt');
   };
 
+  const isAuthenticated = !!token;
+  console.log(isAuthenticated);
+
   return (
-    <AuthContext.Provider value={{ isLoggedIn, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated,login, logout }}>
       {children}
     </AuthContext.Provider>
   );

@@ -3,13 +3,14 @@ import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import "./Login.css";
 import { useAuth } from '../../context/auth_context';
+import Cookies from 'js-cookie';
 
 
 const Login = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  const { isLoggedIn, login } = useAuth();
+  const { login } = useAuth();
 
   const navigate = useNavigate();
 
@@ -22,7 +23,9 @@ const Login = () => {
       })
       .then((res) => {
         if(res.status === 200) {
-          login();
+          const { token } = res.data;
+          Cookies.set('jwt', token, { httpOnly: true, secure: true });
+          login(token);
           navigate("/");
         }
       })

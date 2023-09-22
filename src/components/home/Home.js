@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Home.css";
 import Featured from "../featured/Featured";
 import { Link } from "react-router-dom";
-
+import { useAuth } from "../../context/auth_context";
 
 function Home() {
   const [label, setLabel] = useState("");
-
+  const { isAuthenticated } = useAuth();
+  useEffect(() => {
+    console.log(isAuthenticated);
+  }, []);
   const handleSelect = (event) => {
     setLabel(event.target.label);
   };
