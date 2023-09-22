@@ -23,13 +23,13 @@ function Home() {
       <div className="home" id="home">
       <div className="form_container">
         <h4>Select your Budget</h4>
-        <select className="form_select" onChange={handleSelect}>
+        <select className="home_select" onChange={handleSelect}>
           {options.map((option) => (
             <option className="options" value={option.value}>{option.label}</option>
           ))}
         </select>
         <Link to="/products_page" >
-        <button className="btn">Search</button>
+        <button className="search_btn">Search</button>
         </Link>
       </div>
     </div>
