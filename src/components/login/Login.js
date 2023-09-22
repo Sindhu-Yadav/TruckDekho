@@ -2,22 +2,27 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import "./Login.css";
+import { useAuth } from '../../context/auth_context';
+
 
 const Login = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+
+  const { isLoggedIn, login } = useAuth();
 
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/login", {
+      .post("http://localhost:4000/api/auth/login", {
         email: email,
         password: password,
       })
-      .then((user) => {
-        if(user.data) {
+      .then((res) => {
+        if(res.status === 200) {
+          login();
           navigate("/");
         }
       })

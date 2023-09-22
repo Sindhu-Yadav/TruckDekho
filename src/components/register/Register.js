@@ -13,13 +13,13 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/register", {
+      .post("http://localhost:4000/api/auth/register", {
         username: username,
         email: email,
         password: password,
       })
-      .then((user) => {
-        if (user.data) {
+      .then((res) => {
+        if (res.status === 201) {
           navigate("/");
         }
       })
@@ -51,7 +51,7 @@ const Register = () => {
             name="password"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button className="btn">Register</button>
+          <button className="btn" type="submit">Register</button>
           <p>
             Already have an account?
             <Link className="loginlink" to="/login">

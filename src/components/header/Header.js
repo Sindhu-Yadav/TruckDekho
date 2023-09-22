@@ -4,11 +4,24 @@ import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faHeart, faUser } from "@fortawesome/fontawesome-free-regular";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from '../../context/auth_context';
 
 const Header = () => {
-  const handleSubmit = () => {
+  const Navigate = useNavigate();
+
+  const { isLoggedIn, logout } = useAuth();
+  const handleLogout = (e) => {
+    e.preventDefault();
     axios
-    .get("http://localhost:4000/logout");
+      .post("http://localhost:4000/api/auth/logout")
+      .then(() => {
+        logout();
+        Navigate("/login");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   return (
     <div className="header">
@@ -36,20 +49,23 @@ const Header = () => {
           <a href="/favorites">
             <FontAwesomeIcon className="favorites" icon={faHeart} />
           </a>
-          <a href="/register" className="register_page_button">
-            <FontAwesomeIcon icon={faUser} className="user_icon" />
-            Login/Register
-          </a>
-          <button onClick={handleSubmit}>Log Out</button>
+          {isLoggedIn ? (
+            <button onClick={handleLogout}>Log Out</button>
+          ) : (
+            <a href="/register" className="register_page_button">
+              <FontAwesomeIcon icon={faUser} className="user_icon" />
+              Login/Register
+            </a>
+          )}
         </section>
       </div>
       <div className="header_lower">
         <ul className="navbar">
           <li className="navbar_item">
-            <a href="#home">Home</a>
+            <a href="http://localhost:3000/#home">Home</a>
           </li>
           <li className="navbar_item">
-            <a href="#featured">Featured</a>
+            <a href="http://localhost:3000/#featured">Featured</a>
           </li>
           <li className="navbar_item">
             <a href=""></a>Contact
