@@ -19,9 +19,8 @@ const Products_page = () => {
     setFilters(updatedFilters);
   };
 
-  const applyFilters = () => {
-    e.preventDefault();
-    
+  const applyFilters = (e) => {
+    // e.preventDefault();
   };
 
   useEffect(() => {
