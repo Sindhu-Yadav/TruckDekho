@@ -1,6 +1,5 @@
-
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import Cookies from 'js-cookie';
+import React, { createContext, useContext, useState, useEffect } from "react";
+import Cookies from "js-cookie";
 
 const AuthContext = createContext();
 
@@ -13,33 +12,30 @@ export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(null);
 
   useEffect(() => {
-    const jwtToken = Cookies.get('jwt');
+    const jwtToken = Cookies.get("jwt");
     if (jwtToken) {
       try {
         setToken(jwtToken);
       } catch (error) {
-        console.error('Token verification error:', error);
+        console.error("Token verification error:", error);
       }
     }
   }, []);
 
   const login = (jwtToken) => {
     setToken(jwtToken);
-    Cookies.set('jwt', jwtToken, { httpOnly: true, secure: true });
+    Cookies.set("jwt", jwtToken, { httpOnly: true, secure: true });
   };
 
   const logout = () => {
-    setToken(null);
-    Cookies.remove('jwt');
+    localStorage.setItem("jwt", "");
   };
 
   const isAuthenticated = !!token;
-  console.log(isAuthenticated);
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated,login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
 };
-

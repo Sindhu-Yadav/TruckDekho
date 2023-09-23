@@ -10,7 +10,7 @@ import { useAuth } from '../../context/auth_context';
 const Header = () => {
   const Navigate = useNavigate();
 
-  const { isAuthenticated, logout } = useAuth();
+  const { logout } = useAuth();
   const handleLogout = (e) => {
     e.preventDefault();
     axios
@@ -49,7 +49,7 @@ const Header = () => {
           <a href="/favorites">
             <FontAwesomeIcon className="favorites" icon={faHeart} />
           </a>
-          {isAuthenticated ? (
+          {localStorage.getItem('jwt') ? (
             <button onClick={handleLogout}>Log Out</button>
           ) : (
             <a href="/register" className="register_page_button">

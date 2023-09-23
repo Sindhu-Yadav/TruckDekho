@@ -6,10 +6,7 @@ import { useAuth } from "../../context/auth_context";
 
 function Home() {
   const [label, setLabel] = useState("");
-  const { isAuthenticated } = useAuth();
-  useEffect(() => {
-    console.log(isAuthenticated);
-  }, []);
+  
   const handleSelect = (event) => {
     setLabel(event.target.label);
   };
