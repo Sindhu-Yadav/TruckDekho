@@ -1,9 +1,7 @@
-import React, {useEffect} from "react";
+import React from "react";
 import Product from "../productcard/Product_card";
 import "./Favorites.css";
-import { useAuth } from "../../context/auth_context";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
 const Favorites = () => {
   const Navigate = useNavigate();

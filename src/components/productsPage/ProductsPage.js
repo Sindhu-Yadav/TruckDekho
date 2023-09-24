@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./Products_page.css";
+import "./ProductsPage.css";
 import axios from "axios";
 import Product from "../productcard/Product_card";
 import Filter from "./Filter";
 
-const Products_page = () => {
+const ProductsPage = () => {
   const [filteredProducts, setfilteredProducts] = useState([]);
   const [filters, setFilters] = useState({
     minPrice: "",
@@ -34,7 +34,7 @@ const Products_page = () => {
 
   useEffect(() => {
     applyFilters();
-  }, [filters]);
+  });
 
   return (
     <div className="products_page">
@@ -58,4 +58,4 @@ const Products_page = () => {
   );
 };
 
-export default Products_page;
+export default ProductsPage;

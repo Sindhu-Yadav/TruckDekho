@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import Featured from "../featured/Featured";
 import { Link } from "react-router-dom";
-import { useAuth } from "../../context/auth_context";
 
 function Home() {
   const [label, setLabel] = useState("");
-  
+
   const handleSelect = (event) => {
     setLabel(event.target.label);
   };
@@ -21,19 +20,21 @@ function Home() {
   return (
     <div>
       <div className="home" id="home">
-      <div className="form_container">
-        <h4>Select your Budget</h4>
-        <select className="home_select" onChange={handleSelect}>
-          {options.map((option) => (
-            <option className="options" value={option.value}>{option.label}</option>
-          ))}
-        </select>
-        <Link to="/products_page" >
-        <button className="search_btn">Search</button>
-        </Link>
+        <div className="form_container">
+          <h4>Select your Budget</h4>
+          <select className="home_select" onChange={handleSelect}>
+            {options.map((option) => (
+              <option className="options" value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+          <Link to="/products_page">
+            <button className="search_btn">Search</button>
+          </Link>
+        </div>
       </div>
-    </div>
-    <Featured />
+      <Featured />
     </div>
   );
 }

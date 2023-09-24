@@ -68,10 +68,10 @@ const Header = () => {
             <a href="http://localhost:3000/#featured">Featured</a>
           </li>
           <li className="navbar_item">
-            <a href=""></a>Contact
+            <a href="#">Contact</a>
           </li>
           <li className="navbar_item">
-            <a href=""></a>About
+            <a href="#">About</a>
           </li>
         </ul>
         <section className="line"></section>
