@@ -1,7 +1,8 @@
 import React from "react";
+import { useEffect } from "react";
 
 const Filter = ({ filters, onFilterChange }) => {
-  const { minPrice, maxPrice, selectedCompany, selectedYear } = filters;
+  const { minPrice, maxPrice, company, year } = filters;
 
   const handleInputChange = (field, value) => {
     onFilterChange({
@@ -10,9 +11,13 @@ const Filter = ({ filters, onFilterChange }) => {
     });
   };
 
+  useEffect(()=>{
+    console.log(filters);
+  },[filters]);
+
   return (
     <div>
-      <label htmlFor="minPrice">Min Price:</label>
+      <label htmlFor="minPrice">Min Price(in Lac):</label>
       <input
         type="number"
         id="minPrice"
@@ -20,7 +25,7 @@ const Filter = ({ filters, onFilterChange }) => {
         onChange={(e) => handleInputChange("minPrice", e.target.value)}
       />
       <br />
-      <label htmlFor="maxPrice">Max Price:</label>
+      <label htmlFor="maxPrice">Max Price(in Lac):</label>
       <input
         type="number"
         id="maxPrice"
@@ -30,24 +35,25 @@ const Filter = ({ filters, onFilterChange }) => {
       <br />
       <label htmlFor="company">Company:</label>
       <select
-        id="brand"
-        value={selectedCompany}
-        onChange={(e) => handleInputChange("selectedBrand", e.target.value)}
+        id="company"
+        value={company}
+        type="string"
+        onChange={(e) => handleInputChange("company", e.target.value)}
       >
         <option value="">Select Company</option>
-        <option value="Brand 1">Mahindra</option>
-        <option value="Brand 2">Ashok Leyland</option>
-        <option value="Brand 3"> Maruti Suzuki</option>
-        <option value="Brand 4">Tata</option>
-        <option value="Brand 5">Isuzu</option>
+        <option value="Mahindra">Mahindra</option>
+        <option value="Ashok Leyland">Ashok Leyland</option>
+        <option value="Maruti Suzuki"> Maruti Suzuki</option>
+        <option value="Tata">Tata</option>
+        <option value="Isuzu">Isuzu</option>
       </select>
       <br />
       <label htmlFor="year">Year:</label>
       <input
         type="number"
         id="year"
-        value={selectedYear}
-        onChange={(e) => handleInputChange("selectedYear", e.target.value)}
+        value={year}
+        onChange={(e) => handleInputChange("year", e.target.value)}
       />
     </div>
   );

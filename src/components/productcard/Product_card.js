@@ -8,7 +8,8 @@ const Product = (props) => {
         <img className='product_image' src={props.imageUrl} alt={props.productName} />
         <p className='product_name'>{props.productName}</p>
         <p className='product_company'> {props.company} </p>
-        <p>Price: ${props.price}</p>
+        <p>Price: ${props.price} Lac</p>
+        <p>Year: {props.year}</p>
         <button className='btn'>Checkout Product</button>
     </div>
   )
