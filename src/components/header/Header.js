@@ -10,6 +10,10 @@ import { useAuth } from '../../context/auth_context';
 const Header = () => {
   const Navigate = useNavigate();
 
+  const handleSearchClick = ()=>{
+    Navigate("/products_page");
+  }
+
   const { logout } = useAuth();
   const handleLogout = (e) => {
     e.preventDefault();
@@ -40,7 +44,7 @@ const Header = () => {
             type="text"
             placeholder="Search Trucks"
           />
-          <button className="search_button">
+          <button className="search_button" onClick={handleSearchClick}>
             <FontAwesomeIcon className="search_icon" icon={faSearch} />
           </button>
         </section>
