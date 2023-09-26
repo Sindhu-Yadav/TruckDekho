@@ -26,7 +26,7 @@ const ComparisonTable = () => {
         console.log(err);
       }
     }
-  }, [authToken]);
+  }, [authToken, products]);
   return (
     <div className="comparison-table">
       <h1>Compare Your Products</h1>

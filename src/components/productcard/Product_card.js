@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Product_card.css";
 import jwt_decode from "jwt-decode";
 import axios from "axios";
