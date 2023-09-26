@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import "./ProductsPage.css";
 import axios from "axios";
@@ -40,12 +41,12 @@ const ProductsPage = () => {
     <div className="products_page">
       <div className="filter_container">
         <Filter filters={filters} onFilterChange={handleFilterChange} />
-        <button onClick={applyFilters}>Search</button>
       </div>
       <div className="product_container">
         {filteredProducts.map((product) => (
           <Product
-            key={product.id}
+            key={product._id}
+            productId={product._id}
             imageUrl="https://images.pexels.com/photos/16189121/pexels-photo-16189121/free-photo-of-truck-in-outskirts.jpeg?auto=compress&cs=tinysrgb&w=300"
             productName={product.name}
             company={product.company}
