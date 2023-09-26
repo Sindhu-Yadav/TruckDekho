@@ -48,7 +48,6 @@ const Header = () => {
             <FontAwesomeIcon className="search_icon" icon={faSearch} />
           </button>
         </section>
-
         <section className="right_header">
           <a href="/favorites">
             <FontAwesomeIcon className="favorites" icon={faHeart} />
@@ -61,6 +60,9 @@ const Header = () => {
               Login/Register
             </a>
           )}
+          <a href="/comparisonTable">
+            <button>Compare</button>
+          </a>
         </section>
       </div>
       <div className="header_lower">
