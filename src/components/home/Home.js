@@ -29,7 +29,7 @@ function Home() {
               </option>
             ))}
           </select>
-          <Link to="/products_page">
+          <Link to="/productspage">
             <button className="search_btn">Search</button>
           </Link>
         </div>

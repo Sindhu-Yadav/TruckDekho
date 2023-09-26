@@ -11,7 +11,7 @@ const Header = () => {
   const Navigate = useNavigate();
 
   const handleSearchClick = ()=>{
-    Navigate("/products_page");
+    Navigate("/productspage");
   }
 
   const { logout } = useAuth();
