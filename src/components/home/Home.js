@@ -1,40 +1,38 @@
-import React, { useState } from "react";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./Home.css";
+import { useNavigate } from "react-router-dom";
 import Featured from "../featured/Featured";
-import { Link } from "react-router-dom";
 
 function Home() {
-  const [label, setLabel] = useState("");
+  const Navigate = useNavigate();
 
-  const handleSelect = (event) => {
-    setLabel(event.target.label);
+  const handleSearchClick = () => {
+    Navigate("/productspage");
   };
-  const options = [
-    { label: "Option 1", value: 1 },
-    { label: "Option 2", value: 2 },
-    { label: "Option 3", value: 3 },
-    { label: "Option 4", value: 4 },
-    { label: "Option 5", value: 5 },
-  ];
 
   return (
     <div>
-      <div className="home" id="home">
-        <div className="form_container">
-          <h4>Select your Budget</h4>
-          <select className="home_select" onChange={handleSelect}>
-            {options.map((option) => (
-              <option className="options" value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-          <Link to="/productspage">
-            <button className="search_btn">Search</button>
-          </Link>
-        </div>
+      <div className="bg_img bg-cover bg-center h-screen">
+        <h1 className="text-gray-200 text-4xl font-bold flex justify-center pt-20 mb-6">
+          Your One Stop Destination for truck Search
+        </h1>
+        <section className="flex justify-center">
+          <input
+            className="bg-black bg-opacity-60 text-white w-80 px-4 mt-4 py-2 rounded-lg focus:outline-none"
+            type="text"
+            placeholder="Search Trucks"
+          />
+          <button
+            className="ml-4 hover:bg-blue-600 text-white mt-4 px-4 py-2 rounded-lg"
+            onClick={handleSearchClick}
+          >
+            <FontAwesomeIcon className="" icon={faSearch} />
+          </button>
+        </section>
       </div>
-      <Featured />
+      {/* <Featured /> */}
     </div>
   );
 }
