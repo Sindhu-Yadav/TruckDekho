@@ -38,11 +38,11 @@ const ProductsPage = () => {
   });
 
   return (
-    <div className="products_page">
-      <div className="filter_container">
+    <div className="flex m-4 justify-around min-h-screen">
+      <div className="flex-grow-1">
         <Filter filters={filters} onFilterChange={handleFilterChange} />
       </div>
-      <div className="product_container">
+      <div className="flex-grow-2 w-9/12 mt-2">
         {filteredProducts.map((product) => (
           <Product
             key={product._id}

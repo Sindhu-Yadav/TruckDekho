@@ -25,7 +25,7 @@ function Home() {
             placeholder="Search Trucks"
           />
           <button
-            className="ml-4 hover:bg-blue-600 text-white mt-4 px-4 py-2 rounded-lg"
+            className="ml-4 text-white mt-4 px-4 py-2 rounded-lg transition-transform hover:scale-150"
             onClick={handleSearchClick}
           >
             <FontAwesomeIcon className="" icon={faSearch} />

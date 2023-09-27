@@ -35,20 +35,35 @@ const Product = (props) => {
     }
   };
   return (
-    <div className="product">
-      <img
-        className="product_image"
-        src={props.imageUrl}
-        alt={props.productName}
-      />
-      <p className="product_name">{props.productName}</p>
-      <p className="product_company"> {props.company} </p>
-      <p>Price: ${props.price} Lac</p>
-      <p>Year: {props.year}</p>
-      <button className="btn">Checkout Product</button>
-      <button className="btn" onClick={handleCompare}>
-        Compare
-      </button>
+    <div className="ml-4 bg-gray-800 rounded-lg shadow-md p-4 flex mb-2">
+      <div className="w-32 h-32 object-cover rounded-lg mr-4">
+        <img
+          className="w-full h-full rounded-lg"
+          src={props.imageUrl}
+          alt={props.productName}
+        />
+      </div>
+      <div className="flex flex-col text-white w-full">
+        <p className="product_name text-2xl font-semibold">
+          {props.productName}
+        </p>
+        <p className="product_company text-gray-400">{props.company}</p>
+        <p className="text-green-400 font-semibold mt-2">
+          Price: ${props.price} Lac
+        </p>
+        <p className="text-blue-400 font-semibold">Year: {props.year}</p>
+        <div className="flex mt-4">
+          <button className="bg-indigo-600 text-white hover:bg-indigo-700 mr-4">
+            Checkout Product
+          </button>
+          <button
+            className="bg-orange-500 text-white hover:bg-orange-600"
+            onClick={handleCompare}
+          >
+            Compare
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
