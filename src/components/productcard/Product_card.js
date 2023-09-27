@@ -35,7 +35,7 @@ const Product = (props) => {
     }
   };
   return (
-    <div className="ml-4 bg-gray-800 rounded-lg shadow-md p-4 flex mb-2">
+    <div className="ml-4 mr-4 bg-gray-800 rounded-lg shadow-md p-4 flex mb-2">
       <div className="w-32 h-32 object-cover rounded-lg mr-4">
         <img
           className="w-full h-full rounded-lg"

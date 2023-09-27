@@ -29,38 +29,53 @@ const Register = () => {
   };
 
   return (
-    <div className="register">
-      <div className="registerform_container">
-        <h1>Register Here</h1>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="username"
-            name="username"
-            onChange={(e) => setuserName(e.target.value)}
-          />
-          <input
-            type="email"
-            placeholder="email"
-            name="email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button className="btn" type="submit">Register</button>
-          <p>
-            Already have an account?
-            <Link className="loginlink" to="/login">
-              Login
-            </Link>
-          </p>
-        </form>
+    <div className="flex justify-center items-center min-h-screen bg-gray-800">
+  <div className="bg-gray-900 p-8 rounded-lg shadow-md text-white">
+    <h1 className="text-2xl font-semibold mb-4">Register Here</h1>
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="mb-4">
+        <input
+          type="text"
+          placeholder="Username"
+          name="username"
+          onChange={(e) => setuserName(e.target.value)}
+          className="w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500"
+        />
       </div>
-    </div>
+      <div className="mb-4">
+        <input
+          type="email"
+          placeholder="Email"
+          name="email"
+          onChange={(e) => setEmail(e.target.value)}
+          className="w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500"
+        />
+      </div>
+      <div className="mb-4">
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          onChange={(e) => setPassword(e.target.value)}
+          className="w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500"
+        />
+      </div>
+      <button
+        type="submit"
+        className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+      >
+        Register
+      </button>
+      <p className="text-sm text-gray-300">
+        Already have an account?
+        <Link to="/login" className="text-blue-500 ml-1 hover:underline">
+          Login
+        </Link>
+      </p>
+    </form>
+  </div>
+</div>
+
   );
 };
 
