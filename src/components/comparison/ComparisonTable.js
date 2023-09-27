@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import "./ComparisonTable.css";
 import jwt_decode from "jwt-decode";
@@ -28,32 +27,32 @@ const ComparisonTable = () => {
     }
   }, [authToken, products]);
   return (
-    <div className="comparison-table">
-      <h1>Compare Your Products</h1>
-      <table>
+    <div className="bg-gray-800 p-4 rounded-lg shadow-md text-white min-h-screen">
+      <h1 className="text-2xl font-bold mb-4 ml-3">Compare Your Products</h1>
+      <table className="w-full">
         <thead>
           <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Company</th>
-            <th>Price</th>
-            <th>Year</th>
+            <th className="px-4 py-2">Image</th>
+            <th className="px-4 py-2">Name</th>
+            <th className="px-4 py-2">Company</th>
+            <th className="px-4 py-2">Price</th>
+            <th className="px-4 py-2">Year</th>
           </tr>
         </thead>
         <tbody>
           {products.map((product, index) => (
             <tr key={index}>
-              <td>
+              <td className="px-4 py-2">
                 <img
                   src="https://images.pexels.com/photos/16189121/pexels-photo-16189121/free-photo-of-truck-in-outskirts.jpeg?auto=compress&cs=tinysrgb&w=300"
                   alt={product.name}
-                  className="product-image"
+                  className="rounded object-cover h-32 w-full"
                 />
               </td>
-              <td>{product.name}</td>
-              <td>{product.company}</td>
-              <td>${product.price} Lac</td>
-              <td>{product.year}</td>
+              <td className="px-4 py-2">{product.name}</td>
+              <td className="px-4 py-2">{product.company}</td>
+              <td className="px-4 py-2">${product.price} Lac</td>
+              <td className="px-4 py-2">{product.year}</td>
             </tr>
           ))}
         </tbody>
@@ -63,4 +62,3 @@ const ComparisonTable = () => {
 };
 
 export default ComparisonTable;
-
