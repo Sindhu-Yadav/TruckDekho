@@ -59,7 +59,7 @@
 
 /* Scale the thumbnail on hover */
 .thumbnail:hover {
-  transform: scale(10) translateY(-60%); /* Scale up by 20% on hover */
+  transform: scale(8) translateY(-50%); /* Scale up by 20% on hover */
 }
 
 /* Container for product details */
