@@ -18,7 +18,7 @@
 /* Container for the main product image */
 .product-image {
   flex: 1; /* Occupy 1/3 of the horizontal space */
-  width: 200px; /* Adjust the image width as needed */
+  width: 350px; /* Adjust the image width as needed */
   height: 200px; /* Adjust the image height as needed */
   margin-right: 16px;
   overflow: hidden;
@@ -59,7 +59,7 @@
 
 /* Scale the thumbnail on hover */
 .thumbnail:hover {
-  transform: scale(1.2); /* Scale up by 20% on hover */
+  transform: scale(10) translateY(-60%); /* Scale up by 20% on hover */
 }
 
 /* Container for product details */
@@ -127,4 +127,3 @@
 .compare-button:hover {
   background-color: #e15900; /* Darker orange on hover */
 }
-

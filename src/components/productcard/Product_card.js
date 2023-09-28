@@ -42,10 +42,10 @@ const Product = (props) => {
         </div>
         <div className="product-thumbnails">
           <div className="thumbnail">
-            <img src={props.imageUrl} alt="Thumbnail 1" />
+            <img src="https://th.bing.com/th/id/OIP.5ngnXs6GANmyaKoht4aM4AHaEK?w=323&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Thumbnail 1" />
           </div>
           <div className="thumbnail">
-            <img src={props.imageUrl} alt="Thumbnail 2" />
+            <img src="https://th.bing.com/th?q=6X6+Truck&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247&thvar=defdefault" alt="Thumbnail 2" />
           </div>
           <div className="thumbnail">
             <img src={props.imageUrl} alt="Thumbnail 3" />
