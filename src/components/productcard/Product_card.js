@@ -59,7 +59,7 @@ const Product = (props) => {
         <p className="product-year">Fuel Tank: 190L</p>
         <p className="product-year">Power: 140hp</p>
         <div className="product-buttons">
-          <button className="checkout-button">Checkout Product</button>
+          <button className="checkout-button">Know More</button>
           <button className="compare-button" onClick={handleCompare}>
             Compare
           </button>
