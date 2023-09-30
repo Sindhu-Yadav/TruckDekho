@@ -34,17 +34,17 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-800">
-      <div className="bg-gray-900 p-8 rounded-lg shadow-md text-white mt-4">
+    <div className="flex justify-center items-center min-h-screen bg-gray-800 login-background">
+      <div className="bg-gray-900 p-8 rounded-lg shadow-md text-white mt-4 container-box">
         <h1 className="text-2xl font-semibold mb-4">Login Here</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="mb-4">
+          <div className="mb-4 ">
             <input
               type="email"
               placeholder="Email"
               name="email"
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500"
+              className="w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500 input-box"
             />
           </div>
           <div className="mb-4">
@@ -53,18 +53,18 @@ const Login = () => {
               placeholder="Password"
               name="password"
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500"
+              className="w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500 input-box"
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="login-btn"
           >
             Login
           </button>
           <p className="text-sm text-gray-300">
             New to TruckDekho?
-            <Link to="/register" className="text-blue-500 ml-1 hover:underline">
+            <Link to="/register" className="text-red-500 ml-1 hover:underline">
               Register
             </Link>
           </p>

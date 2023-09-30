@@ -1,4 +1,17 @@
 
 .Footer{
-    background-color: green;
+    background-color: #b70e1e;
+    color: #fff;
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    line-height: 28px;
+    justify-content: space-around;
+}
+
+
+.footer-title{
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: underline;
 }

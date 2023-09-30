@@ -24,10 +24,10 @@ const Header = () => {
   };
   return (
     <div className="heading ">
-      {/* <h1>Sidhant</h1> */}
-      <div className="">
+      
+      <div className="flex">
         <section>
-          <h1 className="">
+          <h1 className="mt-2 mb-2 ml-2 mr-10 font-bold">
             <a className="text-gray-300" href="/">
               Josh Riders
             </a>
@@ -36,22 +36,25 @@ const Header = () => {
 
         <section>
           <ul className="flex justify-center">
-            <li className="mt-4 mr-10 font-bold">
+            <li className="mt-2 mb-2 mr-10 font-normal">
               <a href="http://localhost:3000/#home">Home</a>
             </li>
-            <li className="mt-4 mr-10 font-bold">
+            <li className="mt-2 mb-2 mr-10 font-normal">
               <a href="http://localhost:3000/#featured">Featured</a>
             </li>
-            <li className="mt-4 mr-10 font-bold">
+            <li className="mt-2 mb-2 mr-10 font-normal">
               <a href="#">Contact</a>
             </li>
-            <li className="mt-4 mr-10 font-bold">
+            <li className="mt-2 mb-2 mr-10 font-normal">
               <a href="#">About</a>
             </li>
+            <li className="mt-2 mb-2 mr-10 font-normal"> <a href="/comparisonTable">
+            <button>Compare</button>
+          </a></li>
           </ul>
         </section>
 
-        <section className="flex">
+        <section className="flex right-align mt-2 mb-2 mr-5">
           <a className="mr-8" href="/favorites">
             <FontAwesomeIcon className="favorites" icon={faHeart} />
           </a>
@@ -65,9 +68,7 @@ const Header = () => {
               Login/Register
             </a>
           )}
-          <a href="/comparisonTable">
-            <button>Compare</button>
-          </a>
+         
         </section>
       </div>
     </div>

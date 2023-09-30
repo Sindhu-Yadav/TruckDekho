@@ -29,7 +29,7 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-white-800">
+    <div className="flex justify-center items-center min-h-screen bg-white-800 register-background">
   <div className="bg-gray-900 p-8 rounded-lg shadow-md text-white">
     <h1 className="text-2xl font-semibold mb-4">Register Here</h1>
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -39,7 +39,7 @@ const Register = () => {
           placeholder="Username"
           name="username"
           onChange={(e) => setuserName(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500"
+          className=" input-box w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500"
         />
       </div>
       <div className="mb-4">
@@ -48,7 +48,7 @@ const Register = () => {
           placeholder="Email"
           name="email"
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500"
+          className=" input-box w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500"
         />
       </div>
       <div className="mb-4">
@@ -57,12 +57,12 @@ const Register = () => {
           placeholder="Password"
           name="password"
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500"
+          className=" input-box w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500"
         />
       </div>
       <button
         type="submit"
-        className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        className="register-btn w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
       >
         Register
       </button>

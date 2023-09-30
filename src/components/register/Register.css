@@ -1,0 +1,16 @@
+.register-background{
+    background-image: url("https://img.freepik.com/free-vector/gradient-technological-background_23-2148884155.jpg?w=740&t=st=1696073722~exp=1696074322~hmac=8d44768e1411edfa1d9b5eab2267b26d8a046eb76c5055b1f6756b7ad7bbf78b");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: fixed;
+}
+.register-btn{
+    background-color: #b70e1e;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: 1px solid #fff;
+    width: 100%;
+    border-radius: 4px;
+
+}

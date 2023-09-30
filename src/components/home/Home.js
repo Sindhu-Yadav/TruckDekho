@@ -16,7 +16,7 @@ function Home() {
   return (
     <div>
       <div className="bg_img bg-cover bg-center h-screen">
-        <h1 className="text-gray-200 text-4xl font-bold flex justify-center pt-20 mb-6">
+        <h1 className=" text-4xl font-bold flex justify-center pt-60 mb-6">
           Your One Stop Destination for truck Search
         </h1>
         <section className="flex justify-center">
