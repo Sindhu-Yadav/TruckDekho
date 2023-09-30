@@ -14,7 +14,7 @@ import { AuthProvider } from "./context/auth_context";
 function App() {
   return (
     <AuthProvider>
-      <div className="bg-black">
+      <div className="">
         <Header />
         <Routes>
           <Route path="/productspage" element={<ProductsPage />} />

@@ -23,12 +23,13 @@ const Header = () => {
       });
   };
   return (
-    <div className="bg-black h-screen-20 text-gray-200 pt-6 pb-6">
-      <div className="flex items-baseline justify-around">
+    <div className="heading ">
+      {/* <h1>Sidhant</h1> */}
+      <div className="">
         <section>
-          <h1 className="text-4xl font-bold text-white">
+          <h1 className="">
             <a className="text-gray-300" href="/">
-              TruckDekho
+              Josh Riders
             </a>
           </h1>
         </section>

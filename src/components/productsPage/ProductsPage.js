@@ -51,7 +51,7 @@ const ProductsPage = () => {
             productName={product.name}
             company={product.company}
             price={product.price}
-            year={product.year}
+            year="2023"
           />
         ))}
       </div>

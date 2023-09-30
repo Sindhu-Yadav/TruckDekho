@@ -4,6 +4,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
 import Featured from "../featured/Featured";
+import Footer from "../footer/Footer";
 
 function Home() {
   const Navigate = useNavigate();
@@ -32,7 +33,9 @@ function Home() {
           </button>
         </section>
       </div>
-      {/* <Featured /> */}
+      <Featured />
+      <Footer/>
+      {/* here is my code */}
     </div>
   );
 }
