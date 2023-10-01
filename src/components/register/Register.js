@@ -32,9 +32,10 @@ const Register = () => {
   return (
     <div className="">
   <div className="">
-    <h1 className="">Register Here</h1>
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <h1 className="head">Register Here</h1>
+    <form onSubmit={handleSubmit} className="">
       <div className="">
+        <label htmlFor="username">Username</label>
         <input
           type="text"
           placeholder="Username"
@@ -44,6 +45,7 @@ const Register = () => {
         />
       </div>
       <div className="">
+      <label htmlFor="email">Email</label>
         <input
           type="email"
           placeholder="Email"
@@ -53,6 +55,7 @@ const Register = () => {
         />
       </div>
       <div className="">
+      <label htmlFor="password">Password</label>
         <input
           type="password"
           placeholder="Password"

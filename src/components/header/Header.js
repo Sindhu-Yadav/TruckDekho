@@ -23,35 +23,35 @@ const Header = () => {
       });
   };
   return (
-    <div className="bg-black h-screen-20 text-gray-200 pt-6 pb-6">
-      <div className="flex items-baseline justify-around">
+    <div className="">
+      <div className="">
         <section>
-          <h1 className="text-4xl font-bold text-white">
-            <a className="text-gray-300" href="/">
+          <h1 className="">
+            <a className="" href="/">
               TruckDekho
             </a>
           </h1>
         </section>
 
         <section>
-          <ul className="flex justify-center">
-            <li className="mt-4 mr-10 font-bold">
+          <ul className="">
+            <li className="">
               <a href="http://localhost:3000/#home">Home</a>
             </li>
-            <li className="mt-4 mr-10 font-bold">
+            <li className="">
               <a href="http://localhost:3000/#featured">Featured</a>
             </li>
-            <li className="mt-4 mr-10 font-bold">
+            <li className="">
               <a href="#">Contact</a>
             </li>
-            <li className="mt-4 mr-10 font-bold">
+            <li className="">
               <a href="#">About</a>
             </li>
           </ul>
         </section>
 
-        <section className="flex">
-          <a className="mr-8" href="/favorites">
+        <section className="">
+          <a className="" href="/favorites">
             <FontAwesomeIcon className="favorites" icon={faHeart} />
           </a>
           {localStorage.getItem("jwt") ? (
@@ -59,7 +59,7 @@ const Header = () => {
               Logout
             </button>
           ) : (
-            <a href="/register" className="mr-2">
+            <a href="/register" className="">
               <FontAwesomeIcon icon={faUser} className="user_icon" />
               Login/Register
             </a>

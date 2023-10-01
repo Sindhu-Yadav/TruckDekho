@@ -9,12 +9,15 @@ import Favorites from "./components/favorites/Favorites";
 import Register from "./components/register/Register";
 import Login from "./components/login/Login";
 import ComparisonTable from "./components/comparison/ComparisonTable";
+import Registerchoice from "./components/register/Registerchoice";
 import { AuthProvider } from "./context/auth_context";
+import Mobileregister from "./components/register/Mobileregister";
+import Mobileotp from "./components/register/Mobileotp";
 
 function App() {
   return (
     <AuthProvider>
-      <div className="bg-black">
+      <div className="">
         <Header />
         <Routes>
           <Route path="/productspage" element={<ProductsPage />} />
@@ -23,6 +26,9 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/comparisonTable" element={<ComparisonTable />} />
+          <Route path="/registerchoice" element={<Registerchoice />} />
+          <Route path="/mobileregister" element={<Mobileregister />} />
+          <Route path="/mobileotp" element={<Mobileotp />} />
         </Routes>
       </div>
     </AuthProvider>
