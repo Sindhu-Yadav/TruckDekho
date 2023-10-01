@@ -56,6 +56,7 @@ const Product = (props) => {
         <p className="product-name">{props.productName}</p>
         <p className="product-company">{props.company}</p>
         <p className="product-price">Price: ${props.price} Lac</p>
+        <p className="product-year">Year: {props.year}</p>
         <p className="product-year">Fuel Tank: 190L</p>
         <p className="product-year">Power: 140hp</p>
         <div className="product-buttons">

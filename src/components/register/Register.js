@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import "./Register.css";
 import axios from "axios";
@@ -29,46 +30,46 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-800">
-  <div className="bg-gray-900 p-8 rounded-lg shadow-md text-white">
-    <h1 className="text-2xl font-semibold mb-4">Register Here</h1>
+    <div className="">
+  <div className="">
+    <h1 className="">Register Here</h1>
     <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="mb-4">
+      <div className="">
         <input
           type="text"
           placeholder="Username"
           name="username"
           onChange={(e) => setuserName(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500"
+          className=""
         />
       </div>
-      <div className="mb-4">
+      <div className="">
         <input
           type="email"
           placeholder="Email"
           name="email"
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500"
+          className=""
         />
       </div>
-      <div className="mb-4">
+      <div className="">
         <input
           type="password"
           placeholder="Password"
           name="password"
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500"
+          className=""
         />
       </div>
       <button
         type="submit"
-        className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        className=""
       >
         Register
       </button>
-      <p className="text-sm text-gray-300">
+      <p className="">
         Already have an account?
-        <Link to="/login" className="text-blue-500 ml-1 hover:underline">
+        <Link to="/login" className="">
           Login
         </Link>
       </p>
@@ -80,3 +81,4 @@ const Register = () => {
 };
 
 export default Register;
+
