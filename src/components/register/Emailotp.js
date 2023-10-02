@@ -1,30 +1,31 @@
 
+
 import React from "react";
 import axios from "axios";
-import "./Mobileotp.css";
+import "./Emailotp.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/auth_context";
 
-const Mobileotp = () => {
+const Emailotp = () => {
   const navigate = useNavigate();
   
   const [OTP, setOTP] = useState("");
-  const { setIsMobileverified } = useAuth();
+  const { setIsEmailverified } = useAuth();
   const handleOTP = async (e) => {
     e.preventDefault();
     try {
       axios
-        .post("http://localhost:4000/api/mobile/verifyOTP", {
+        .post("http://localhost:4000/api/email/verifyOTP", {
           inputotp: OTP,
         })
         .then((res) => {
           if (res.status === 200) {
-            setIsMobileverified(true);
-            navigate("/Mobileregister");
+            setIsEmailverified(true);
+            navigate("/Emailregister");
           } else {
-            setIsMobileverified(false);
-            console.log("Mobile Number Not Verified!!");
+            setIsEmailverified(false);
+            console.log("Email Not Verified!!");
           }
         })
         .catch((error) => {
@@ -37,7 +38,7 @@ const Mobileotp = () => {
   return (
     <div>
       <h1 className="heading">
-        Enter the otp recieved on your provided number
+        Enter the otp recieved on your provided email
       </h1>
       <form action="">
         <input
@@ -53,4 +54,4 @@ const Mobileotp = () => {
   );
 };
 
-export default Mobileotp;
+export default Emailotp;

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -6,13 +5,13 @@ import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import ProductsPage from "./components/productsPage/ProductsPage";
 import Favorites from "./components/favorites/Favorites";
-import Register from "./components/register/Register";
 import Login from "./components/login/Login";
 import ComparisonTable from "./components/comparison/ComparisonTable";
 import Registerchoice from "./components/register/Registerchoice";
 import { AuthProvider } from "./context/auth_context";
 import Mobileregister from "./components/register/Mobileregister";
 import Mobileotp from "./components/register/Mobileotp";
+import EmailRegister from "./components/register/EmailRegister";
 
 function App() {
   return (
@@ -23,7 +22,7 @@ function App() {
           <Route path="/productspage" element={<ProductsPage />} />
           <Route path="/" element={<Home />} />
           <Route path="/favorites" element={<Favorites />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/Emailregister" element={<EmailRegister />} />
           <Route path="/login" element={<Login />} />
           <Route path="/comparisonTable" element={<ComparisonTable />} />
           <Route path="/registerchoice" element={<Registerchoice />} />
@@ -36,4 +35,3 @@ function App() {
 }
 
 export default App;
-

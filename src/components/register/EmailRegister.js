@@ -1,18 +1,18 @@
 
 import React, { useState } from "react";
-import "./Mobileregister.css";
+import "./EmailRegister.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../../context/auth_context";
 
-const Mobileregister = () => {
+const Emailregister = () => {
   const navigate = useNavigate();
-  const { mobileNumber, setMobileNumber } = useAuth();
+  const { email, setEmail } = useAuth();
   const [formData, setFormData] = useState({
     username: "",
-    email: "",
+    email: email,
     password: "",
-    mobile: mobileNumber,
+    mobile: "",
     confirmPassword: "",
   });
   const [passwordMatch, setPasswordMatch] = useState(true);
@@ -32,7 +32,7 @@ const Mobileregister = () => {
       axios
         .post("http://localhost:4000/api/auth/register", {
           username: formData.username,
-          mobile: formData.mobile,
+          email: formData.email,
           password: formData.password,
         })
         .then((res) => {
@@ -50,7 +50,7 @@ const Mobileregister = () => {
 
   return (
     <div>
-      Mobile Register
+      Email Register
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Username</label>
         <input
@@ -84,5 +84,5 @@ const Mobileregister = () => {
   );
 };
 
-export default Mobileregister;
+export default Emailregister;
 

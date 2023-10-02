@@ -1,14 +1,16 @@
+
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import "./Registerchoice.css";
+import { useAuth } from "../../context/auth_context";
 
 const Registerchoice = () => {
   const navigate = useNavigate();
   const [registrationMethod, setregistrationMethod] = useState("mobile");
-  const [email, setEmail] = useState("");
-  const [mobilenumber, setmobilenumber] = useState("");
-  //   918923741802
+  const { email, setEmail } = useAuth();
+  const { mobileNumber, setMobileNumber } = useAuth();
+
   const handleMethodChange = (e) => {
     setregistrationMethod(e);
   };
@@ -18,18 +20,35 @@ const Registerchoice = () => {
       if (registrationMethod === "mobile") {
         axios
           .post("http://localhost:4000/api/mobile/sendOTP", {
-            mobile: mobilenumber,
+            mobile: mobileNumber,
           })
           .then((res) => {
             console.log(res.data);
             if (res.status === 200) {
-              navigate("/Mobileregister");
+              navigate("/Mobileotp");
+            } else {
+              console.log(res.data.message);
             }
           })
           .catch((error) => {
             console.log(error);
           });
-      } else {
+      } else if (registrationMethod === "email") {
+        axios
+          .post("http://localhost:4000/api/email/sendOTP", {
+            email: mobileNumber,
+          })
+          .then((res) => {
+            console.log(res.data);
+            if (res.status === 200) {
+              navigate("/Emailotp");
+            } else {
+              console.log(res.data.message);
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+          });
       }
     } catch (error) {
       console.error(error);
@@ -44,7 +63,7 @@ const Registerchoice = () => {
             type="radio"
             id="mobileMethod"
             name="registrationMethod"
-            value="mobile"
+            value="mobileNumber"
             onChange={() => handleMethodChange("mobile")}
           />
           <label htmlFor="mobileMethod">
@@ -68,8 +87,8 @@ const Registerchoice = () => {
               type="number"
               placeholder="Enter your mobile number..."
               name="mobilenumber"
-              value={mobilenumber}
-              onChange={(e) => setmobilenumber(e.target.value)}
+              value={mobileNumber}
+              onChange={(e) => setMobileNumber(e.target.value)}
             />
           </>
         )}
@@ -92,3 +111,4 @@ const Registerchoice = () => {
 };
 
 export default Registerchoice;
+

@@ -59,7 +59,7 @@ const Header = () => {
               Logout
             </button>
           ) : (
-            <a href="/register" className="">
+            <a href="/registerchoice" className="">
               <FontAwesomeIcon icon={faUser} className="user_icon" />
               Login/Register
             </a>
