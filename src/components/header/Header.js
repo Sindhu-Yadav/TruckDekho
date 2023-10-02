@@ -24,10 +24,9 @@ const Header = () => {
   };
   return (
     <div className="heading ">
-      
-      <div className="flex">
+      <div className="">
         <section>
-          <h1 className="mt-2 mb-2 ml-2 mr-10 font-bold">
+          <h1 className="d">
             <a className="text-gray-300" href="/">
               Josh Riders
             </a>
@@ -48,9 +47,12 @@ const Header = () => {
             <li className="mt-2 mb-2 mr-10 font-normal">
               <a href="#">About</a>
             </li>
-            <li className="mt-2 mb-2 mr-10 font-normal"> <a href="/comparisonTable">
-            <button>Compare</button>
-          </a></li>
+            <li className="mt-2 mb-2 mr-10 font-normal">
+              {" "}
+              <a href="/comparisonTable">
+                <button>Compare</button>
+              </a>
+            </li>
           </ul>
         </section>
 
@@ -68,7 +70,6 @@ const Header = () => {
               Login/Register
             </a>
           )}
-         
         </section>
       </div>
     </div>
