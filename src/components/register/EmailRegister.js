@@ -48,7 +48,7 @@ const Emailregister = () => {
   };
 
   return (
-    <div>
+    <div className="form-container">
       Email Register
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Username</label>
@@ -60,6 +60,7 @@ const Emailregister = () => {
         />
         <label htmlFor="password">Password</label>
         <input
+          className="text-field"
           type="password"
           name="password"
           placeholder="Enter password"
@@ -67,6 +68,7 @@ const Emailregister = () => {
         />
         <label htmlFor="Confirm Password">Confirm Password</label>
         <input
+          className="text-field"
           type="text"
           name="confirmPassword"
           placeholder="Confirm Password"
@@ -77,7 +79,7 @@ const Emailregister = () => {
             <p>Passwords do not match.</p>
           </div>
         )}
-        <button type="submit">Register</button>
+        <button className="register-btn" type="submit">Register</button>
       </form>
     </div>
   );

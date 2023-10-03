@@ -14,25 +14,22 @@ function Home() {
 
   return (
     <div>
-      <div className="bg_img bg-cover bg-center h-screen">
-        <h1 className="text-gray-200 text-4xl font-bold flex justify-center pt-20 mb-6">
-          Your One Stop Destination for truck Search
-        </h1>
-        <section className="flex justify-center">
-          <input
-            className="bg-black bg-opacity-60 text-white w-80 px-4 mt-4 py-2 rounded-lg focus:outline-none"
-            type="text"
-            placeholder="Search Trucks"
-          />
-          <button
-            className="ml-4 text-white mt-4 px-4 py-2 rounded-lg transition-transform hover:scale-150"
-            onClick={handleSearchClick}
-          >
-            <FontAwesomeIcon className="" icon={faSearch} />
-          </button>
-        </section>
+      <div>
+        <img
+          className="bg_img"
+          src="https://wallpapers.com/images/featured/cool-trucks-cdvn4ttk7o8geggz.webp"
+        />
+        <input
+          className="input_box"
+          placeholder="Search..."
+          type="text"
+          id="myInput"
+        ></input>
+        <button className="searchbtn" onClick={handleSearchClick}>
+          <FontAwesomeIcon className="favorites" icon={faSearch} />
+        </button>
       </div>
-      {/* <Featured /> */}
+      <Featured />
     </div>
   );
 }

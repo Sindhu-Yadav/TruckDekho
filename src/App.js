@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
 import ProductsPage from "./components/productsPage/ProductsPage";
 import Favorites from "./components/favorites/Favorites";
@@ -31,6 +32,7 @@ function App() {
           <Route path="/mobileotp" element={<Mobileotp />} />
           <Route path="/emailotp" element={<Emailotp />} />
         </Routes>
+        <Footer />
       </div>
     </AuthProvider>
   );

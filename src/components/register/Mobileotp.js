@@ -35,11 +35,11 @@ const Mobileotp = () => {
     }
   };
   return (
-    <div>
-      <h1 className="heading">
+    <div className="">
+      <h1>
         Enter the otp recieved on your provided number
       </h1>
-      <form action="">
+      <form className="" action="">
         <input
           type="number"
           value={OTP}

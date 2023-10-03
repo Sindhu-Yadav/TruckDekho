@@ -23,53 +23,50 @@ const Header = () => {
       });
   };
   return (
-    <div className="">
-      <div className="">
-        <section>
-          <h1 className="">
-            <a className="" href="/">
-              TruckDekho
-            </a>
-          </h1>
-        </section>
+    <ul className="heading top-nav">
+      <li className="top-nav">
+        <div className="logo">
+          <a href="/">Josh Riders</a>
+        </div>
+      </li>
 
-        <section>
-          <ul className="">
-            <li className="">
-              <a href="http://localhost:3000/#home">Home</a>
-            </li>
-            <li className="">
-              <a href="http://localhost:3000/#featured">Featured</a>
-            </li>
-            <li className="">
-              <a href="#">Contact</a>
-            </li>
-            <li className="">
-              <a href="#">About</a>
-            </li>
-          </ul>
-        </section>
+      <li className="top-nav">
+        <a href="http://localhost:3000/#home">Home</a>
+      </li>
+      <li className="top-nav">
+        <a href="http://localhost:3000/#featured">Featured</a>
+      </li>
+      <li className="top-nav">
+        <a href="#">Contact</a>
+      </li>
+      <li className="top-nav">
+        <a href="#">About</a>
+      </li>
+      <li className="top-nav">
+        {" "}
+        <a href="/comparisonTable">
+          <button className="btn">Compare</button>
+        </a>
+      </li>
 
-        <section className="">
-          <a className="" href="/favorites">
-            <FontAwesomeIcon className="favorites" icon={faHeart} />
+      <li className="right_menu top-nav">
+        <a href="/favorites">
+          <FontAwesomeIcon className="favorites" icon={faHeart} />
+        </a>
+      </li>
+      {localStorage.getItem("jwt") ? (
+        <button className="mr-6" onClick={handleLogout}>
+          Logout
+        </button>
+      ) : (
+        <li className="right_menu top-nav">
+          <a href="/registerchoice">
+            <FontAwesomeIcon icon={faUser} className="user_icon" />
+            &nbsp;Login/Register
           </a>
-          {localStorage.getItem("jwt") ? (
-            <button className="mr-6" onClick={handleLogout}>
-              Logout
-            </button>
-          ) : (
-            <a href="/registerchoice" className="">
-              <FontAwesomeIcon icon={faUser} className="user_icon" />
-              Login/Register
-            </a>
-          )}
-          <a href="/comparisonTable">
-            <button>Compare</button>
-          </a>
-        </section>
-      </div>
-    </div>
+        </li>
+      )}
+    </ul>
   );
 };
 
