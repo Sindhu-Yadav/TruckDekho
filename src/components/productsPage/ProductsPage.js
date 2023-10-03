@@ -12,6 +12,9 @@ const ProductsPage = () => {
     maxPrice: "",
     company: "",
     year: "",
+    Gross_vehicle_weight: "",
+    payload: "",
+    bodylength: ""
   });
 
   const handleFilterChange = (updatedFilters) => {
@@ -19,8 +22,8 @@ const ProductsPage = () => {
   };
 
   const applyFilters = () => {
-    const { minPrice, maxPrice, company, year } = filters;
-    const queryParams = `?minPrice=${minPrice}&maxPrice=${maxPrice}&company=${company}&year=${year}`;
+    const { minPrice, maxPrice, company, year, Gross_vehicle_weight, payload, bodylength } = filters;
+    const queryParams = `?minPrice=${minPrice}&maxPrice=${maxPrice}&company=${company}&year=${year}&Gross_vehicle_weight=${Gross_vehicle_weight}&payload=${payload}&bodylength=${bodylength}`;
     const url = `http://localhost:4000/api/atlas/products/${queryParams}`;
     axios
       .get(url)
@@ -47,11 +50,14 @@ const ProductsPage = () => {
           <Product
             key={product._id}
             productId={product._id}
-            imageUrl="https://images.pexels.com/photos/16189121/pexels-photo-16189121/free-photo-of-truck-in-outskirts.jpeg?auto=compress&cs=tinysrgb&w=300"
+            imageUrl={product.image}
             productName={product.name}
             company={product.company}
             price={product.price}
-            year="2023"
+            Gross_vehicle_weight={product.gross_vehicle_weight}
+            payload={product.payload}
+            length={product.bodylength}
+            year={product.year}
           />
         ))}
       </div>
