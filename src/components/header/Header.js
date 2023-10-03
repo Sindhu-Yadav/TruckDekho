@@ -55,7 +55,7 @@ const Header = () => {
         </a>
       </li>
       {localStorage.getItem("jwt") ? (
-        <button className="mr-6" onClick={handleLogout}>
+        <button className="logout_btn" onClick={handleLogout}>
           Logout
         </button>
       ) : (

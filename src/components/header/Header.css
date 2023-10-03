@@ -33,3 +33,13 @@ li a {
   border-radius: 4px;
   padding: 2px 4px;
 }
+
+.logout_btn{
+  position: absolute;
+  top: 30%;
+  right: 4%;
+  color: #b70e1e;
+  border: 1px solid #b70e1e;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
