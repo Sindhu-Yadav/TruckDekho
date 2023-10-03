@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import "./Mobileregister.css";
 import { useNavigate } from "react-router-dom";
@@ -85,4 +84,3 @@ const Mobileregister = () => {
 };
 
 export default Mobileregister;
-

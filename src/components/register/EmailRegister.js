@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import "./EmailRegister.css";
 import { useNavigate } from "react-router-dom";
@@ -85,4 +84,3 @@ const Emailregister = () => {
 };
 
 export default Emailregister;
-

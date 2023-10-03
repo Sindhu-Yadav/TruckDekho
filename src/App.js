@@ -11,6 +11,7 @@ import Registerchoice from "./components/register/Registerchoice";
 import { AuthProvider } from "./context/auth_context";
 import Mobileregister from "./components/register/Mobileregister";
 import Mobileotp from "./components/register/Mobileotp";
+import Emailotp from "./components/register/Emailotp";
 import EmailRegister from "./components/register/EmailRegister";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/registerchoice" element={<Registerchoice />} />
           <Route path="/mobileregister" element={<Mobileregister />} />
           <Route path="/mobileotp" element={<Mobileotp />} />
+          <Route path="/emailotp" element={<Emailotp />} />
         </Routes>
       </div>
     </AuthProvider>

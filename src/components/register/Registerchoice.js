@@ -36,7 +36,7 @@ const Registerchoice = () => {
       } else if (registrationMethod === "email") {
         axios
           .post("http://localhost:4000/api/email/sendOTP", {
-            email: mobileNumber,
+            email: email,
           })
           .then((res) => {
             console.log(res.data);
