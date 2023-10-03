@@ -12,7 +12,7 @@ const Featured = () => {
       <div className="box-model">
         <h2 className="box-title">The Most Popular Cars</h2>
         <div className="inner-box-model">
-          <div className="box-inner"> <img src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380816.jpg?width=540" alt="" /> </div>
+          <div className="box-inner"> <img className="img" src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380816.jpg?width=540" alt="" /> </div>
           <div className="caption-box">
             Car Name<span className="caption-box-title">4,48,888</span>
           </div>
@@ -21,7 +21,7 @@ const Featured = () => {
           </div>
         </div>
         <div className="inner-box-model">
-        <div className="box-inner"><img src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380522.jpg?width=540" alt=""/></div>
+        <div className="box-inner"><img className="img" src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380522.jpg?width=540" alt=""/></div>
         <div className="caption-box">
             Car Name<span className="caption-box-title">4,48,888</span>
           </div>
@@ -30,7 +30,7 @@ const Featured = () => {
           </div>
         </div>
         <div className="inner-box-model">
-        <div className="box-inner"><img src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662382205.jpg?width=540" alt=""/></div>
+        <div className="box-inner"><img className="img" src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662382205.jpg?width=540" alt=""/></div>
         <div className="caption-box">
             Car Name<span className="caption-box-title">4,48,888</span>
           </div>
@@ -39,7 +39,7 @@ const Featured = () => {
           </div>
         </div>
         <div className="inner-box-model">
-          <div className="box-inner"><img src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/></div>
+          <div className="box-inner"><img className="img" src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/></div>
           <div className="caption-box">
             Car Name<span className="caption-box-title">4,48,888</span>
           </div>
@@ -54,30 +54,30 @@ const Featured = () => {
         <h2 className="box-title">Get trusted used trucks nearby</h2>
         <div className="inner-content-modal">
         <div className="inner-content">
-        <img  src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
+        <img className="img"  src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
         <div class="box-inner-title">Pune</div>
         </div>
         <div className="inner-content">
-        <img  src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
+        <img  className="img" src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
         <div class="box-inner-title">Banglore</div>
         </div>
       
         <div className="inner-content">
-        <img src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
+        <img className="img" src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
         <div class="box-inner-title">Jaipur</div>
         </div>
         
         <div className="inner-content">
-        <img src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
+        <img className="img" src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
         <div class="box-inner-title">Mumbai</div>
         </div>
    
         <div className="inner-content">
-        <img src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
+        <img className="img" src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
         <div class="box-inner-title">Dehli</div>
         </div>
         <div className="inner-content">
-        <img src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
+        <img className="img" src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
         <div class="box-inner-title">Maharastra</div>
         </div>
         </div>
@@ -87,22 +87,22 @@ const Featured = () => {
         <h2 className="box-title"> Popular Brands</h2>
         <div className="inner-content-modal">
         <div className="inner-content">
-        <img src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
+        <img className="img" src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
         </div>
       
         <div className="inner-content">
-        <img src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
+        <img className="img" src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
         </div>
         
         <div className="inner-content">
-        <img src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
+        <img className="img" src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
         </div>
    
         <div className="inner-content">
-        <img src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
+        <img className="img" src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
         </div>
         <div className="inner-content">
-        <img src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
+        <img className="img" src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1662380769.jpg?width=540" alt=""/>
         </div>
         </div>
         </div>

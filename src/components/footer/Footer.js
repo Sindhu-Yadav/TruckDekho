@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="Footer">
       <div className="inner-footer ">
         <h1 className="footer-title">ABOUT JOSH RIDERS</h1>
-        <ul>
+        <ul className="bottom-footer">
           <li>About Us</li>
           <li>Careers With Us</li>
           <li>Terms And Conditions</li>
@@ -16,24 +16,24 @@ const Footer = () => {
       </div>
       <div className="inner-footer ">
         <h1 className="footer-title">CONTACT WITH US</h1>
-        <ul>
+        <ul className="bottom-footer">
           <li>
-            <a>Facebook</a>
+            Facebook
           </li>
           <li>
-            <a>Instagram</a>
+            Instagram
           </li>
           <li>
-            <a>Youtube</a>
+            Youtube
           </li>
           <li>
-            <a>Contact Us</a>
+            Contact Us
           </li>
         </ul>
       </div>
       <div className="inner-footer ">
         <h1 className="footer-title">OTHER</h1>
-        <ul>
+        <ul className="bottom-footer">
           <li>Email : joshriders.com</li>
           <li>Phone : 1234567890</li>
           <li>Address : 14th main road , MP, 563848</li>
@@ -42,7 +42,7 @@ const Footer = () => {
       <div className="inner-footer ">
         <h1 className="footer-title">FEEDBACK</h1>
         
-        <input className="w-full px-1 py1 mt-2 border rounded-sm  text-white focus:outline-none focus:border-blue-500" type="text" placeholder="Give us feedback" />
+        <input className="text-box" type="text" placeholder="Give us feedback" />
       </div>
     </div>
   );

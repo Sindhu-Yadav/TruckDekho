@@ -23,56 +23,57 @@ const Header = () => {
       });
   };
   return (
-    <div className="heading ">
-      <div className="">
-        <section>
-          <h1 className="d">
-            <a className="text-gray-300" href="/">
+   
+ 
+
+ <ul className="heading top-nav">
+  <li className="top-nav">
+          <div className="logo">
+            <a  href="/">
               Josh Riders
             </a>
-          </h1>
-        </section>
+          </div>
+        </li>
 
-        <section>
-          <ul className="flex justify-center">
-            <li className="mt-2 mb-2 mr-10 font-normal">
+        
+         
+            <li className="top-nav">
               <a href="http://localhost:3000/#home">Home</a>
             </li>
-            <li className="mt-2 mb-2 mr-10 font-normal">
+            <li className="top-nav">
               <a href="http://localhost:3000/#featured">Featured</a>
             </li>
-            <li className="mt-2 mb-2 mr-10 font-normal">
+            <li className="top-nav">
               <a href="#">Contact</a>
             </li>
-            <li className="mt-2 mb-2 mr-10 font-normal">
+            <li className="top-nav">
               <a href="#">About</a>
             </li>
-            <li className="mt-2 mb-2 mr-10 font-normal">
+            <li className="top-nav">
               {" "}
               <a href="/comparisonTable">
-                <button>Compare</button>
+                <button className="btn">Compare</button>
               </a>
             </li>
-          </ul>
-        </section>
-
-        <section className="flex right-align mt-2 mb-2 mr-5">
-          <a className="mr-8" href="/favorites">
+       
+            <li className="right_menu top-nav"><a  href="/favorites">
             <FontAwesomeIcon className="favorites" icon={faHeart} />
-          </a>
+          </a></li>
           {localStorage.getItem("jwt") ? (
             <button className="mr-6" onClick={handleLogout}>
               Logout
             </button>
           ) : (
-            <a href="/register" className="mr-2">
+            <li className="right_menu top-nav"><a href="/register">
               <FontAwesomeIcon icon={faUser} className="user_icon" />
-              Login/Register
-            </a>
+               &nbsp;Login/Register
+            </a></li>
+          
           )}
-        </section>
-      </div>
-    </div>
+            </ul>
+       
+    
+   
   );
 };
 

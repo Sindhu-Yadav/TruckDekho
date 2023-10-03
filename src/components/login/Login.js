@@ -34,9 +34,9 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-800 login-background">
-      <div className="bg-gray-900 p-8 rounded-lg shadow-md text-white mt-4 container-box">
-        <h1 className="text-2xl font-semibold mb-4">Login Here</h1>
+    <div className="register-background">
+      <div className="form-container">
+        <h1 className="heading-color">Login Here</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="mb-4 ">
             <input
@@ -44,7 +44,7 @@ const Login = () => {
               placeholder="Email"
               name="email"
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500 input-box"
+              className="text-field"
             />
           </div>
           <div className="mb-4">
@@ -53,19 +53,20 @@ const Login = () => {
               placeholder="Password"
               name="password"
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-2 border rounded-lg bg-gray-700 text-white focus:outline-none focus:border-blue-500 input-box"
+              className="text-field"
             />
           </div>
+          <br/>
           <button
             type="submit"
-            className="login-btn"
+            className="register-btn"
           >
             Login
           </button>
-          <p className="text-sm text-gray-300">
+          <p className="heading-color">
             New to TruckDekho?
-            <Link to="/register" className="text-red-500 ml-1 hover:underline">
-              Register
+            <Link to="/register" className="">
+              &nbsp;Register
             </Link>
           </p>
         </form>

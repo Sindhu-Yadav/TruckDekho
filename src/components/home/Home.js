@@ -15,7 +15,11 @@ function Home() {
 
   return (
     <div>
-      <div className="bg_img bg-cover bg-center h-screen">
+    <div > <img className="bg_img" src="https://wallpapers.com/images/featured/cool-trucks-cdvn4ttk7o8geggz.webp"/>
+    <input  className="input_box" placeholder="Search..." type="text" id="myInput"></input>
+    {/* <button className="button_box" type="button">submit</button> */}
+      </div>
+      {/* <div className="bg_img bg-cover bg-center h-screen">
         <h1 className=" text-4xl font-bold flex justify-center pt-60 mb-6">
           Your One Stop Destination for truck Search
         </h1>
@@ -32,7 +36,7 @@ function Home() {
             <FontAwesomeIcon className="" icon={faSearch} />
           </button>
         </section>
-      </div>
+      </div> */}
       <Featured />
       <Footer/>
       {/* here is my code */}

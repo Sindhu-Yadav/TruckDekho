@@ -1,7 +1,9 @@
+
+.featured{margin-bottom: 50px;}
 .inner-content-img{
     max-width: 50%;
 }
-
+.img{ width: 100%;}
 .box-model{
     background-color: #fff;
     padding: 15px 20px;
@@ -52,6 +54,11 @@
     text-align: center;
     border:1px solid #b70e1e;
     font-weight: 700;
+}
+.detail-box:hover{
+    background-color: #b70e1e;
+    color: #fff;
+    cursor: pointer;
 }
  .inner-content-modal{
    display:flex;
