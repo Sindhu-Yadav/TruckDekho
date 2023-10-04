@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import "./ProductsPage.css";
 import axios from "axios";
@@ -14,7 +13,7 @@ const ProductsPage = () => {
     year: "",
     Gross_vehicle_weight: "",
     payload: "",
-    bodylength: ""
+    bodylength: "",
   });
 
   const handleFilterChange = (updatedFilters) => {
@@ -22,7 +21,15 @@ const ProductsPage = () => {
   };
 
   const applyFilters = () => {
-    const { minPrice, maxPrice, company, year, Gross_vehicle_weight, payload, bodylength } = filters;
+    const {
+      minPrice,
+      maxPrice,
+      company,
+      year,
+      Gross_vehicle_weight,
+      payload,
+      bodylength,
+    } = filters;
     const queryParams = `?minPrice=${minPrice}&maxPrice=${maxPrice}&company=${company}&year=${year}&Gross_vehicle_weight=${Gross_vehicle_weight}&payload=${payload}&bodylength=${bodylength}`;
     const url = `http://localhost:4000/api/atlas/products/${queryParams}`;
     axios
@@ -66,4 +73,3 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
-
