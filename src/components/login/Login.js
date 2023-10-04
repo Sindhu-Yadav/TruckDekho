@@ -36,28 +36,29 @@ const Login = () => {
   };
 
   return (
-    <div className="">
+    <div className="form-container">
       <div className="">
-        <h1 className="">Login Here</h1>
+        <h1 className="heading-color ">Login Here</h1>
         <form onSubmit={handleSubmit} className="">
-          <h4>Use Registered Email to login</h4>
+          <h4 className="heading-color1">Use Registered Email to login</h4>
           <div className="">
             <input
               type="email"
               placeholder="Email"
               name="email"
               onChange={(e) => setEmail(e.target.value)}
-              className=""
+              className="text-field"
             />
           </div>
-          <h4>Use Registered Mobile to login</h4>
+          <br />
+          <h4 className="heading-color1">Use Registered Mobile to login</h4>
           <div className="">
             <input
               type="number"
               placeholder="Mobile Number"
               name="mobile"
               onChange={(e) => setMobile(e.target.value)}
-              className=""
+              className="text-field"
             />
           </div>
           <div className="">
@@ -66,17 +67,16 @@ const Login = () => {
               placeholder="Password"
               name="password"
               onChange={(e) => setPassword(e.target.value)}
-              className=""
+              className="text-field"
             />
           </div>
-          <button type="submit" className="">
+          <br />
+          <button type="submit" className="register-btn">
             Login
           </button>
           <p className="">
             New to TruckDekho?
-            <Link to="/register" className="">
-              Register
-            </Link>
+            <Link to="/register">Register</Link>
           </p>
         </form>
       </div>

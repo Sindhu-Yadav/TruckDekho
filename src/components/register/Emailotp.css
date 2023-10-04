@@ -1,1 +1,46 @@
 
+.register-btn {
+  background-color: #b70e1e;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 1px solid hsl(354, 86%, 39%);
+  width: auto;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+.form-container {
+  margin: 10% auto;
+  display: block;
+  width: fit-content;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 25px 50px;
+  text-align: center;
+  box-shadow: 0 2px 14px rgb(173, 22, 22);
+  background-color: #fff;
+}
+.heading-color {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.text-field {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  margin: 10px;
+  border: 1px solid #b70e1e;
+}
+.radio-btn {
+  margin-bottom: 15px;
+  text-align: start;
+}
+.label-field {
+  text-align: start;
+  display: block;
+  color: #fff;
+}

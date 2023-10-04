@@ -55,10 +55,10 @@ const Registerchoice = () => {
     }
   };
   return (
-    <div className="head">
+    <div className="form-container">
       <form action="">
-        <h1>Choose your Registration Method</h1>
-        <div>
+        <h2 className="heading-color">Choose your Registration Method</h2>
+        <div className="radio-btn">
           <input
             type="radio"
             id="mobileMethod"
@@ -70,7 +70,7 @@ const Registerchoice = () => {
             Use Mobile number for registration
           </label>
         </div>
-        <div>
+        <div className="radio-btn">
           <input
             type="radio"
             id="emailMethod"
@@ -82,9 +82,10 @@ const Registerchoice = () => {
         </div>
         {registrationMethod === "mobile" && (
           <>
-            <label htmlFor="mobile_number">Mobile number</label>
+            <label className="label-field" htmlFor="mobile_number">Mobile number</label>
             <input
               type="number"
+              className="text-field"
               placeholder="Enter your mobile number..."
               name="mobilenumber"
               value={mobileNumber}
@@ -94,9 +95,10 @@ const Registerchoice = () => {
         )}
         {registrationMethod === "email" && (
           <>
-            <label htmlFor="email">Email Adddress</label>
+            <label className="label-field" htmlFor="email">Email Adddress</label>
             <input
               type="email"
+              className="text-field"
               placeholder="Enter your Email address..."
               name="email"
               value={email}
@@ -104,7 +106,8 @@ const Registerchoice = () => {
             />
           </>
         )}
-        <button onClick={handleSendOTP}>Send OTP</button>
+        <br/>
+        <button className="register-btn" onClick={handleSendOTP}>Send OTP</button>
       </form>
     </div>
   );
