@@ -50,7 +50,7 @@ const Login = () => {
               className="text-field"
             />
           </div>
-          <br/>
+          <br />
           <h4 className="heading-color1">Use Registered Mobile to login</h4>
           <div className="">
             <input
@@ -70,15 +70,13 @@ const Login = () => {
               className="text-field"
             />
           </div>
-          <br/>
+          <br />
           <button type="submit" className="register-btn">
             Login
           </button>
           <p className="">
             New to TruckDekho?
-            <Link to="/register">
-              Register
-            </Link>
+            <Link to="/register">Register</Link>
           </p>
         </form>
       </div>
