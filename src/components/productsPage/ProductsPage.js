@@ -53,7 +53,7 @@ const ProductsPage = () => {
         <Filter filters={filters} onFilterChange={handleFilterChange} />
       </div>
       <div className="">
-        {filteredProducts.map((product) => (
+        {/* {filteredProducts.map((product) => (
           <Product
             key={product._id}
             productId={product._id}
@@ -66,7 +66,31 @@ const ProductsPage = () => {
             length={product.bodylength}
             year={product.year}
           />
-        ))}
+        ))} */}
+        <Product
+          imageUrl="https://th.bing.com/th/id/OIP.5ngnXs6GANmyaKoht4aM4AHaEK?w=323&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+          productName="Ashok Leyland Dost+"
+          company="Ashok Leyland"
+          price="10"
+        />
+        <Product
+          imageUrl="https://th.bing.com/th/id/OIP.5ngnXs6GANmyaKoht4aM4AHaEK?w=323&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+          productName="Ashok Leyland Dost+"
+          company="Ashok Leyland"
+          price="10"
+        />
+        <Product
+          imageUrl="https://th.bing.com/th/id/OIP.5ngnXs6GANmyaKoht4aM4AHaEK?w=323&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+          productName="Ashok Leyland Dost+"
+          company="Ashok Leyland"
+          price="10"
+        />
+        <Product
+          imageUrl="https://th.bing.com/th/id/OIP.5ngnXs6GANmyaKoht4aM4AHaEK?w=323&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+          productName="Ashok Leyland Dost+"
+          company="Ashok Leyland"
+          price="10"
+        />
       </div>
     </div>
   );

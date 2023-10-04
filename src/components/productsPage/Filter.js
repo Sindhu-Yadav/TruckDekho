@@ -19,7 +19,7 @@ const Filter = ({ filters, onFilterChange }) => {
       [field]: value,
     });
   };
-  
+
   useEffect(() => {
     console.log(filters);
   }, [filters]);
