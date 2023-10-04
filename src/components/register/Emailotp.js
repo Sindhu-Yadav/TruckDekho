@@ -35,6 +35,7 @@ const Emailotp = () => {
     }
   };
   return (
+    <div className="bg-img"> 
     <div className="form-container">
       <h1 className="heading-color1">
         Enter the otp recieved on your provided email
@@ -51,6 +52,7 @@ const Emailotp = () => {
         <br/>
         <button className="register-btn" onClick={handleOTP}>Verify OTP</button>
       </form>
+    </div>
     </div>
   );
 };

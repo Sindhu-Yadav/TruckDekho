@@ -36,6 +36,7 @@ const Login = () => {
   };
 
   return (
+    <div className="bg-img" >
     <div className="form-container">
       <div className="">
         <h1 className="heading-color ">Login Here</h1>
@@ -74,12 +75,13 @@ const Login = () => {
           <button type="submit" className="register-btn">
             Login
           </button>
-          <p className="">
+          <p className="heading-color2">
             New to TruckDekho?
-            <Link to="/register">Register</Link>
+            <Link to="/register"> Register</Link>
           </p>
         </form>
       </div>
+    </div>
     </div>
   );
 };

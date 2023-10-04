@@ -1,5 +1,15 @@
 
  
+.bg-img{
+  background-image: url(https://media.istockphoto.com/id/870479006/photo/car-tire-tracks-in-fresh-snow.jpg?s=612x612&w=0&k=20&c=SPqeV3xD8gzI8Y5yC1sfKaLeXinOQP2p21zcYfoVgiI=) !important ;
+  padding-top: 17vh;
+  padding-bottom: 10vh;
+  background-repeat: no-repeat !important;
+  background-size: 100% !important;
+  background-attachment: fixed !important;
+  
+}
+
 .register-btn {
     background-color: #b70e1e;
     color: #fff;
@@ -12,7 +22,8 @@
     font-weight:600;
   }
   .form-container {
-    margin: 10% auto;
+    
+    margin: auto;
     display: block;
     width: fit-content;
     border: 1px solid #ddd;
@@ -20,19 +31,27 @@
     padding: 25px 50px;
     text-align: center;
     box-shadow: 0 2px 14px rgb(173, 22, 22);
-   
+   background-color: #fff;
+   opacity: 0.9;
   }
   .heading-color {
-    color: #fff;
+    color: #b70e1e;
     font-size: 22px;
     font-weight: 700;
     text-decoration: underline;
   }
   .heading-color1 {
-    color: #fff;
+    color: #b70e1e;
     font-size: 16px;
     font-weight: 500;
     margin:0px 10px;
+   
+  }
+  .heading-color2 {
+    color: #b70e1e;
+    font-size: 16px;
+    font-weight: 500;
+   
    
   }
   

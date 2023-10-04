@@ -48,6 +48,7 @@ const Emailregister = () => {
   };
 
   return (
+    <div className="bg-img">
     <div className="form-container">
       <h3 className="heading-color">Email Register</h3>
       <form onSubmit={handleSubmit}>
@@ -82,6 +83,7 @@ const Emailregister = () => {
         )}
         <button className="register-btn" type="submit">Register</button>
       </form>
+    </div>
     </div>
   );
 };
