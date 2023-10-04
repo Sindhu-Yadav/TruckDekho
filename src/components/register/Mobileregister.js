@@ -49,9 +49,9 @@ const Mobileregister = () => {
 
   return (
     <div className="form-container">
-      Mobile Register
+      <h1 className="heading-color">Mobile Register</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username</label>
+        <label className="label-field" htmlFor="username">Username</label>
         <input
           className="text-field"
           type="text"
@@ -59,7 +59,7 @@ const Mobileregister = () => {
           placeholder="Enter username"
           onChange={handleChange}
         />
-        <label htmlFor="password">Password</label>
+        <label className="label-field" htmlFor="password">Password</label>
         <input
           className="text-field"
           type="password"
@@ -67,7 +67,7 @@ const Mobileregister = () => {
           placeholder="Enter password"
           onChange={handleChange}
         />
-        <label htmlFor="Confirm Password">Confirm Password</label>
+        <label className="label-field" htmlFor="Confirm Password">Confirm Password</label>
         <input
           className="text-field"
           type="text"
@@ -80,6 +80,7 @@ const Mobileregister = () => {
             <p>Passwords do not match.</p>
           </div>
         )}
+        <br/>
         <button className="register-btn" type="submit">
           Register
         </button>

@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import axios from "axios";
 import "./Emailotp.css";
@@ -36,19 +35,21 @@ const Emailotp = () => {
     }
   };
   return (
-    <div>
-      <h1 className="heading">
+    <div className="form-container">
+      <h1 className="heading-color1">
         Enter the otp recieved on your provided email
       </h1>
       <form action="">
         <input
+        className="text-field"
           type="number"
           value={OTP}
           onChange={(e) => {
             setOTP(e.target.value);
           }}
         />
-        <button onClick={handleOTP}>Verify OTP</button>
+        <br/>
+        <button className="register-btn" onClick={handleOTP}>Verify OTP</button>
       </form>
     </div>
   );

@@ -35,19 +35,21 @@ const Mobileotp = () => {
     }
   };
   return (
-    <div className="">
-      <h1>
+    <div className="form-container">
+      <h1 className="heading-color1">
         Enter the otp recieved on your provided number
       </h1>
       <form className="" action="">
         <input
+        className="text-field"
           type="number"
           value={OTP}
           onChange={(e) => {
             setOTP(e.target.value);
           }}
         />
-        <button onClick={handleOTP}>Verify OTP</button>
+        <br/>
+        <button className="register-btn" onClick={handleOTP}>Verify OTP</button>
       </form>
     </div>
   );

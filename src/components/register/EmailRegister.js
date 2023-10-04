@@ -49,31 +49,32 @@ const Emailregister = () => {
 
   return (
     <div className="form-container">
-      Email Register
+      <h3 className="heading-color">Email Register</h3>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username</label>
+        <label  className="label-field" htmlFor="username">Username</label>
         <input
           type="text"
+          className="text-field"
           name="username"
           placeholder="Enter username"
           onChange={handleChange}
-        />
-        <label htmlFor="password">Password</label>
+        /><br/>
+        <label className="label-field" htmlFor="password">Password</label>
         <input
           className="text-field"
           type="password"
           name="password"
           placeholder="Enter password"
           onChange={handleChange}
-        />
-        <label htmlFor="Confirm Password">Confirm Password</label>
+        /><br/>
+        <label className="label-field" htmlFor="Confirm Password">Confirm Password</label>
         <input
           className="text-field"
           type="text"
           name="confirmPassword"
           placeholder="Confirm Password"
           onChange={handleChange}
-        />
+        /><br/>
         {passwordMatch ? null : (
           <div>
             <p>Passwords do not match.</p>
