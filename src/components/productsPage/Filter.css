@@ -1,4 +1,30 @@
 
 .Filterclass{
-    margin-top: 100px;
+    border:1px solid #b70e1e;
+    border-top:none;
+    box-shadow: 0 1px 3px rgb(36 39 44);
+    border-radius: 0px 0px 4px 4px;
+    margin:0px 15px 30px 30px;
+    padding: 15px;
+    
 }
+.filter-header{
+    background-color: #b70e1e;
+    color: #fff;
+    padding: 15px;
+    border:1px solid #b70e1e;
+    border-bottom: none;
+    box-shadow: 0 1px 3px rgb(36 39 44);
+    margin: 30px 15px 0px 30px;
+    border-radius: 4px 4px 0px 0px;
+}
+.input-box{
+    max-width: -webkit-fill-available;
+    padding: 6px 12px;
+    border:1px solid #b70e1e;
+    border-radius: 4px;
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+ 

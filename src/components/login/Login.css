@@ -1,9 +1,9 @@
 
  
 .bg-img{
-  background-image: url(https://media.istockphoto.com/id/870479006/photo/car-tire-tracks-in-fresh-snow.jpg?s=612x612&w=0&k=20&c=SPqeV3xD8gzI8Y5yC1sfKaLeXinOQP2p21zcYfoVgiI=) !important ;
-  padding-top: 17vh;
-  padding-bottom: 10vh;
+  background-image: url(https://removal.ai/wp-content/uploads/2021/05/image12-2.png) !important ;
+  padding-top: 12vh;
+  padding-bottom: 12vh;
   background-repeat: no-repeat !important;
   background-size: 100% !important;
   background-attachment: fixed !important;
@@ -26,11 +26,11 @@
     margin: auto;
     display: block;
     width: fit-content;
-    border: 1px solid #ddd;
+    border: 1px solid #fff;
     border-radius: 25px;
     padding: 25px 50px;
     text-align: center;
-    box-shadow: 0 2px 14px rgb(173, 22, 22);
+    
    background-color: #fff;
    opacity: 0.9;
   }
@@ -70,6 +70,6 @@
   .label-field{
     text-align: start;
     display: block;
-    color: #fff;
+    color: #b70e1e;
   }
   

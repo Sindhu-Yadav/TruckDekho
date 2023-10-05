@@ -59,8 +59,8 @@ const Product = (props) => {
         </div>
       </div>
       <div className="">
-        <p className="">{props.productName}</p>
-        <p className="">{props.company}</p>
+        <p className="brand-name">{props.productName}</p>
+        <p className="brand-name">{props.company}</p>
         <p className="">Price: ${props.price} Lac</p>
         <p className="">Fuel Tank: 190L</p>
         <p className="">Power: 140hp</p>

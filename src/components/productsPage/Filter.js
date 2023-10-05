@@ -25,12 +25,15 @@ const Filter = ({ filters, onFilterChange }) => {
   }, [filters]);
 
   return (
-    <div className="Filterclass">
+   
+    <div className="Filter">
+      <h3 className="filter-header">FLITER</h3>
+      <div className="Filterclass">
       <label htmlFor="minPrice" className="">
         Min Price (in Lac):
       </label>
       <input
-        className=""
+        className="input-box"
         type="number"
         id="minPrice"
         value={minPrice}
@@ -41,7 +44,7 @@ const Filter = ({ filters, onFilterChange }) => {
         Max Price (in Lac):
       </label>
       <input
-        className=""
+        className="input-box"
         type="number"
         id="maxPrice"
         value={maxPrice}
@@ -49,10 +52,10 @@ const Filter = ({ filters, onFilterChange }) => {
       />
       <br />
       <label htmlFor="company" className="">
-        Company:
+        Company:<br/>
       </label>
       <select
-        className=""
+        className="input-box"
         value={company}
         type="string"
         onChange={(e) => handleInputChange("company", e.target.value)}
@@ -70,7 +73,7 @@ const Filter = ({ filters, onFilterChange }) => {
         Year:
       </label>
       <input
-        className=""
+        className="input-box"
         type="number"
         id="year"
         value={year}
@@ -80,7 +83,7 @@ const Filter = ({ filters, onFilterChange }) => {
         Gross vehicle weight:
       </label>
       <input
-        className=""
+        className="input-box"
         type="number"
         id="Gross_vehicle_weight"
         value={Gross_vehicle_weight}
@@ -92,7 +95,7 @@ const Filter = ({ filters, onFilterChange }) => {
         Payload:
       </label>
       <input
-        className=""
+        className="input-box"
         type="number"
         id="payload"
         value={payload}
@@ -104,12 +107,13 @@ const Filter = ({ filters, onFilterChange }) => {
         BodyLength:
       </label>
       <input
-        className=""
+        className="input-box"
         type="number"
         id="bodylength"
         value={bodylength}
         onChange={(e) => handleInputChange("bodylength", e.target.value)}
       />
+    </div>
     </div>
   );
 };

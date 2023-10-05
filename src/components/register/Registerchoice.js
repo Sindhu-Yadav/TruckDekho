@@ -55,6 +55,7 @@ const Registerchoice = () => {
     }
   };
   return (
+    <div className="bg-img">
     <div className="form-container">
       <form action="">
         <h2 className="heading-color">Choose your Registration Method</h2>
@@ -109,6 +110,7 @@ const Registerchoice = () => {
         <br/>
         <button className="register-btn" onClick={handleSendOTP}>Send OTP</button>
       </form>
+    </div>
     </div>
   );
 };

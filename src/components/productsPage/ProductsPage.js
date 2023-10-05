@@ -48,11 +48,11 @@ const ProductsPage = () => {
   });
 
   return (
-    <div className="">
-      <div className="">
+    <div className="card">
+      <div className="left-card">
         <Filter filters={filters} onFilterChange={handleFilterChange} />
       </div>
-      <div className="">
+      <div className="right-card">
         {/* {filteredProducts.map((product) => (
           <Product
             key={product._id}

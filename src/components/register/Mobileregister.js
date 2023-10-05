@@ -48,6 +48,7 @@ const Mobileregister = () => {
   };
 
   return (
+    <div className="bg-img">
     <div className="form-container">
       <h1 className="heading-color">Mobile Register</h1>
       <form onSubmit={handleSubmit}>
@@ -85,6 +86,7 @@ const Mobileregister = () => {
           Register
         </button>
       </form>
+    </div>
     </div>
   );
 };
